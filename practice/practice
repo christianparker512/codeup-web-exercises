@@ -1,0 +1,57 @@
+var LittleMermaidDays = 3;
+var BrotherBearDays = 5;
+var HerculesDays = 1;
+
+console.log("Your movie bill is " + (3 * (LittleMermaidDays + BrotherBearDays + Hercules));
+
+var facebookHours = 10;
+var googleHours = 6;
+var amazonHours = 4;
+var facebookRate = 350;
+var googleRate = 400;
+var amazonRate = 380;
+
+console.log((facebookHours * facebookRate) + (googleHours * googleRate) + (amazonHours * amazonRate));
+
+var isClassFull = false;
+var isConflict = false;
+var canEnroll = !isClassFull && !isConflict;
+
+var currentClassSize = 20;
+var maxClassSize = 30;
+var isClassFull (currentClassSize < maxClassSize);
+
+if (!isClassFull && isConflict) {
+    can enroll = true;
+} else {
+canEnroll = false;
+}
+
+var itemsBought = 3
+var itemsBuyTwo = itemsBought >= 2;
+var expirationDate = "2020-09-20";
+var today = "2020-09-25";
+var isExpired = expirationDate <= today;
+var isPremium = true;
+
+var canGetDiscount = false;
+
+if (didBuyTwo && !isExpired) {
+    canGetDiscount = true;
+} else if (isPremium &&!isExpired) {
+    canGetDiscount = true;
+} else {
+    canGetDiscount = false;
+
+if ((didBuyTwo && !isExpired) || (isPremium && !isExpired) {
+    canGetDiscount = true;
+} else {
+    canGetDiscount = false;
+}
+
+var username = "codeup";
+var discount "notastrongpassword";
+var isFiveCharacters = password.length >= 5;
+var doesIncludeUserName = password.indexOf(username) !== -1;
+var userNameTooLong = password.length < 20;
+var isWhiteSpace = password.trim() !== password || !++ username.trim() !== username;

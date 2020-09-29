@@ -11,6 +11,8 @@
 function sayHello(name) {
     return 'Hello, ' + name;
 }
+
+
 /**
  * TODO:
  * Call the function 'sayHello' and pass your name as a string literal argument.
@@ -26,14 +28,15 @@ console.log(helloMessage);
  * variable to the 'sayHello' function. You should see the same output in the
  * console.
  */
-var helloMessage = sayHello("Chris!")
-console.log(helloMessage);
+var myName = "Chris";
+console.log(sayHello(myName));
+
 // Don't modify the following line, it generates a random number between 1 and 3
 // and stores it in a variable named random
 var random = Math.floor((Math.random() * 3) + 1);
 
 /**
- * TODO:
+
  * Create a function called 'isTwo' that takes a number as a parameter.
  * The function should return a boolean value based on whether or not the passed
  * number is the number 2.
@@ -49,9 +52,11 @@ var random = Math.floor((Math.random() * 3) + 1);
  * different result everytime you refresh the page if you are using the random
  * number)
  */
-function isTwo(number){
-    return number === 2;
+function isTwo(num){
+    return num === 2;
 }
+console.log(random);
+console.log(isTwo(random));
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
@@ -63,29 +68,29 @@ function isTwo(number){
  * > calculateTip(0.25, 25.50) // returns 6.375
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
-function calculateTip(x,y) {
-    function calculateTip(percentage, bill) {
-        return bill * (percentage /100);
-    }
+
+function calculateTip(percentage,total){
+        return percentage * total;
+}
+
+
 console.log(calculateTip(.20, 20));
 console.log(calculateTip(.25, 25.50));
 console.log(calculateTip(.15, 33.42));
 
-    function calculateTip(tp, bill){
-        var tipPercentage = Number(tp / 100);
-        var mealAmount = Number(bill);
-        var tipAmount = (mealAmount * tipPercentage).toFixed(2);
-        return(tipAmount);
-    }
+
  // * TODO:
  // * Use prompt and alert in combination with your calculateTip function to
  // * prompt the user for the bill total and a percentage they would like to tip,
  // * then display the dollar amount they should tip
  // */
-var tipPercentage = Number(prompt("What percent do you want to tip? (use decimals)"))
-var totalBill = Number(prompt("How much was your total bill?"))
-var totalTip = (totalBill * tipPercentage);
-alert("You should leave $ " + totalTip + " on your $" + totalBill + " bill");
+
+
+var tip = Number(prompt("What percent do you want to tip? Enter a number from 1 to 100"));
+var totalBill = Number(prompt("How much was your total bill?"));
+var tipPercentage = (tip/100);
+var tipDollars = calculateTip(tipPercentage, bill).toFixed(2);
+alert("You should leave $ " + tipDollars + " on your $" + totalBill + " bill");
 
 
 var mealTotal = prompt("How much was your meal?" +
@@ -113,15 +118,17 @@ alert("We hope you enjoyed your meal. " +
  */
 
 function applyDiscount(price,discount) {
-    return price - (price * discount);
+    return price - (price * discount).toFixed(2);
 }
-    function applyDiscount(cost, cut){
-        var price = Number(cost);
-        var discount = parseFloat(cut);
-        var discountedPrice = (price - (price * discount)).toFixed(2);
-        return(discountedPrice);
-    }
-    var itemCost = prompt("What does the item cost?");
-    var itemDiscount = prompt("What is the discount to be applied?");
-    var finalCost = applyDiscount(itemCost, itemDiscount);
-    alert("The discounted cost is $" + finalCost);0.12));
+console.log(appyDiscount(100,.3));
+console.log(applyDiscount(59.99, .15));
+    // function applyDiscount(cost, cut){
+    //     var price = Number(cost);
+    //     var discount = parseFloat(cut);
+    //     var discountedPrice = (price - (price * discount)).toFixed(2);
+    //     return(discountedPrice);
+    // }
+    // var itemCost = prompt("What does the item cost?");
+    // var itemDiscount = prompt("What is the discount to be applied?");
+    // var finalCost = applyDiscount(itemCost, itemDiscount);
+    // alert("The discounted cost is $" + finalCost);0.12));

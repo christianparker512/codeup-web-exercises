@@ -329,25 +329,39 @@ var weather = prompt("What's the weather forecast?");
 
 switch(weather) {
     case "rainy":
-        alert("Better wear a raincoat!");
+        alert("Better wear a raincoat! It's raining!");
         break;
     case "sunny":
         alert("The sun is so bright, it's sunny!");
         break;
     case "snow":
-        alert("ham is great");
-        break;
-    case "mushroom":
-        alert("i love mushrooms!");
+        alert("Brrr It's snowing");
         break;
     default:
-        alert(pizzaPreference + " isn't my favorite, but let's order some!");
+        alert(weather + " isn't my favorite. But it doesn't matter, because I'm inside all day!");
         break;
 }
 
 //TODO: Rewrite the intersection function from earlier as a switch statement.
 
-
+switch(trafficLight) {
+    case "red":
+       alert("Time to stop!!!");
+       break;
+    case "yellow":
+        alert("Tip to speed up!!!");
+        break;
+    case "green":
+        alert("Safe Travels, it's green!!!!");
+        break;
+    default:
+        alert("My eyes are playing tricks on me, I can't tell what color you said");
+        break;
+}
+console.log(trafficLight("red"));
+console.log(trafficLight("yellow"));
+console.log(trafficLight("green"));
+console.log(trafficLight("blue"));
 
 // ================ REVERSE ENGINEERING =================
 // Visit each of these links, outline the steps required to achieve each of these demonstrations. You can write code or just write the logic steps that would achieve each output

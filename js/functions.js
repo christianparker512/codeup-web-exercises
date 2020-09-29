@@ -120,13 +120,15 @@ alert("We hope you enjoyed your meal. " +
 function applyDiscount(price,discount) {
     return price - (price * discount);
 }
-    function applyDiscount(cost, cut){
-        var price = Number(cost);
-        var discount = parseFloat(cut);
-        var discountedPrice = (price - (price * discount)).toFixed(2);
-        return(discountedPrice);
-    }
-    var itemCost = prompt("What does the item cost?");
-    var itemDiscount = prompt("What is the discount to be applied?");
-    var finalCost = applyDiscount(itemCost, itemDiscount);
-    alert("The discounted cost is $" + finalCost);0.12));
+console.log(appyDiscount(100,.3));
+console.log(applyDiscount(59.99, .15));
+    // function applyDiscount(cost, cut){
+    //     var price = Number(cost);
+    //     var discount = parseFloat(cut);
+    //     var discountedPrice = (price - (price * discount)).toFixed(2);
+    //     return(discountedPrice);
+    // }
+    // var itemCost = prompt("What does the item cost?");
+    // var itemDiscount = prompt("What is the discount to be applied?");
+    // var finalCost = applyDiscount(itemCost, itemDiscount);
+    // alert("The discounted cost is $" + finalCost);0.12));

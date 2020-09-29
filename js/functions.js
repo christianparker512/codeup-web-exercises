@@ -118,7 +118,7 @@ alert("We hope you enjoyed your meal. " +
  */
 
 function applyDiscount(price,discount) {
-    return price - (price * discount);
+    return price - (price * discount).toFixed(2);
 }
 console.log(appyDiscount(100,.3));
 console.log(applyDiscount(59.99, .15));

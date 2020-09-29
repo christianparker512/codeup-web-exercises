@@ -100,7 +100,7 @@ var levelSatisfied = prompt("What percentage would you like to tip? " +
 var finalTip = calculateTip(levelSatisfied, mealTotal);
 var finalAmount = (+mealTotal + +finalTip).toFixed(2);
 alert("We hope you enjoyed your meal. " +
-    "Based on your answers, the tip would be $" + finalTip + "" +
+    "Based on your answers, the tip would be $" + finalTip + "." +
     ".\nThat would bring the total amount to $" + finalAmount + ".");
 /**
  * TODO:

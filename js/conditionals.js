@@ -68,8 +68,7 @@ console.log(analyzeColor("yellow"));
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-var color = prompt("Please enter a color: ");
-alert(analyzeColorSwitch(color));
+//
 /* ########################################################################## */
 
 /**
@@ -111,8 +110,6 @@ function calculateTotal(luckyNumber, totalAmount) {
         return "Sorry, but you didn't receive a discount. Your total price is: $" + totalAmount;
     }
 }
-console.log(calculateTotal(3,100));
-
 
 console.log(calculateTotal(0, 100));
 console.log(calculateTotal(1, 100));
@@ -146,6 +143,8 @@ function calculateTotal(luckyNumber, totalAmount) {
             return false;
     }
 }
+
+console.log(calculateTotal(3,300));
 /**
  * TODO:
  * Uncomment the line below to generate a random number between 0 and 6.

@@ -18,9 +18,9 @@ for (var i = 0; i < 10; i++) {
 }
 // 4. Create a for loop that uses console.log to create the output shown below.
 function numberPyramid() {
-    let str = ''
-    for (let i = 1; i < 10; i++) {
-        let j = i.toString()
+    var str = ''
+    for (var i = 1; i < 10; i++) {
+        var j = i.toString()
         str += j.repeat(i);
 
         if (i !== 9) str += '\n'

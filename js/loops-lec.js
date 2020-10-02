@@ -52,6 +52,12 @@ var i = 50;
         i--;
     }
 
+    // create a while loop that asks the user to confirm would you like to exit?
+
+var myQuestion;
+    while(!myQuestion){
+        myQuestion = confirm("Would you like to exit?")
+}
 /*********************************************
  *               DO-WHILE LOOPS
  *********************************************/
@@ -60,6 +66,7 @@ var i = 50;
 // do {
 //  Code to be run.
 // } while (condition)
+
 
 
 // var i = 10;

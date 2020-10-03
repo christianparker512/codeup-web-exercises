@@ -116,17 +116,38 @@ alert("Blue is my favorite color too!");
 // }
 
 //TODO TOGETHER: Explore basic for loop syntax
-
-
+// var i = 0;
+// do {
+//     console.log(i);
+//     i+=2;
+// } while (i <=20);
+// for (var i=0; i<0; i++){
+//     console.log('for loop iteration #' +i);
+}
 // TODO TOGETHER: Write a for loop that loops through numbers 0 - 5 (inclusive);
-
-
+// for (initialize; condition; increment){
+//
+// }
+for (var i = 0; i < 5; i++) {
+    console.log(i);
+}
 // TODO TOGETHER: Why are loops beneficial?
-
+// so you can do something over and over again without repeating yourself.Avoid redundancy.
 
 // TODO TOGETHER: Console.log each color from the array randomColors
-//  var randomColors = ["red","orange","yellow","blue","green"]
-
+var randomColors = ["red","orange","yellow","blue","green"]
+// iteration: going over each item in a list
+// console.log(randomColors[0]);
+// console.log(randomColors[1]);
+// console.log(randomColors[2]);
+// console.log(randomColors[3]);
+// console.log(randomColors[4]);
+// // for(initialize; condition;increment)
+// randomColors.length ==5 | final index ==4
+// this syntax is useful if we don't know how many elements are in the array
+for(var index = 0; index < randomColors.length; index++){
+    console.log(randomColors[]);
+}
 
 // for (var i = 0; i < randomColors.length; i++){
 // 	console.log(randomColors[i]);;
@@ -135,10 +156,19 @@ alert("Blue is my favorite color too!");
 
 
 // TODO TOGETHER: Using a for loop, log all even numbers 0 - 100;
-
+for (var i = 0; i <=100; i++ ){
+    if (i%2 ===0) {
+        console.log(i);
+    }
+}
 
 // TODO: Using a for loop, log all numbers divisible by 5, from 0 - 100;
+for(var i = 0; i < 100; i++){
+    if(i%5 ===0){
+    console.log(i);
+    }
 
+}
 
 // TODO: Using a for loop, complete the FizzBuzz challenge:
 //  Your program should count up to 100.
@@ -148,6 +178,17 @@ alert("Blue is my favorite color too!");
 //  All other cases, just log the number.
 
 
+for(var i = 0; i <100; i++){
+    if (i%15=== 0){
+        console.log("FizzBuzz");
+    }else if(i%3 === 0) {
+        console.log("Fizz");
+    }else if (i%5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(i)
+    }
+}
 
 /*********************************************
  *              BREAKS & CONTINUES

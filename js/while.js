@@ -20,6 +20,7 @@ function conesToSellForTheDay(){
         }
     } while (allCones >0);
 }
+conesToSellForTheDay()
 
 
 

@@ -6,7 +6,7 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-    var names = ["Chris", "Lisa", "Abby", "Quincy"]
+    var names = ["Chris", "Lisa", "Abby", "Quincy"];
 
     /**
      * TODO:
@@ -30,14 +30,18 @@
          * Write some code that uses a for loop to log every item in the names
          * array.
          */
-
+        for(var i=0; i <names.length; i++) {
+            console.log(names(i));
+        }
         /**
          * TODO:
          * Refactor your above code to use a `forEach` loop
          */
 
         names.forEach(function (name) {
-            console.log(name);
+
+        }
+            console.log(names);
         })
         /**
          * TODO:
@@ -52,7 +56,19 @@
          *  > second([1, 2, 3, 4, 5]) // returns 2
          *  > last([1, 2, 3, 4, 5]) // return 5
          */
-
-
-    }
+var arrayNumbers = [1,2,5,7,5,4,8]
+        function firstElement(arrayNumbers) {
+    }return arrayNumbers[0]
     });
+
+function second(x) {
+var secondValue = x[1]
+    return[second value]
+}
+console.log(second(names));
+
+function last(input){
+return console.log (input[input.length -1])
+}
+
+console.log

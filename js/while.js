@@ -17,10 +17,29 @@ function conesToSellForTheDay(){
             console.log("Sorry, I can't sell " + customerPurchase + "I only have " + allCones + "cones");
         } else {
             console.log("You're in luck, I have " + allCones + ".  I can sell you " + customerPurchase + " cones");
+            break;
         }
     } while (allCones >0);
 }
 conesToSellForTheDay()
 
+// Solutions
+
+// var allCones = Math.floot(Math.random() * 50) + 50;
+// Math.floor (Math.ramdom() * 5) +1;
+//
+// do {
+//     var allCones = Math.floot(Math.random() * 50) + 50;
+//     if (conesPurchased > allCones) {
+//         var outOfSttock = "Can't Sell you " + conesPurchased + ". I only have " + allCones;
+//             console.log(outOfStock)
+//     } else{
+//         allCones-= conesPurchased;
+//         var soldCones = conesPurchased + "cones soled..." + allCones + " cones to go";
+//         console.log(soldCones);
+//         break;
+//     }
+//     while(allCones >0);
+// }
 
 

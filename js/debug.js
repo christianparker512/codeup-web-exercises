@@ -17,10 +17,11 @@
             * Example Input: ['a', 3, '3', 3, null]
             * Example Output: 6
             */
-            function sum3s(numbers) {
-            var output;
+            // var numbers = ["a", 3, "3", 3, null]
+            function sum3s(numbers){
+            var output = 0;
             numbers.forEach(function(number) {
-            if (number = 3) {
+            if (number === 3) {
             output += 3;
         }
         });
@@ -42,6 +43,8 @@
             });
             return arr;
         }
+
+
             ​
             console.log(upCaseArr(['a', 'cat', 'BOb'])); // should see ['A', 'CAT', 'BOB'] in the console when written correctly
             ​

@@ -4,15 +4,37 @@
     var planetsString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
     var planetsArray = ['Mercury','Venus','Earth','Mars','Jupiter','Saturn','Uranus','Neptune'];
 
+    var planets = ['Mercury','Venus','Earth', 'Mars', 'Jupiter', 'Saturn','Uranus','Neptune'];
     planetsArray = planetsString.split("|");
     console.log(planetsArray);
-    /** planetsArray = planetsString.split("|");
-     console.log(planetsArray);
+
      * TODO:
      * Convert planetsString to an array, and save it in a variable named
      * planetsArray.
      * console.log planetsArray to check your work
      */
+    console.log('Adding "The Sun" from the beginning of the planets array.');
+    planets.unshift("The Sun");
+    console.log(planets);
+
+    console.log('Removing "The Sun" from the beginning of the planets array.');
+    planets.pop();
+    console.log(planets);
+
+    console.log('Removing "The Sun" from the beginning of the planets array.');
+    planets.shift(The Sun);
+    console.log(planets);
+
+    console.log('Removing "Pluto" from the beginning of the planets array.');
+    planets.unshift();
+    console.log(planets);
+
+    console.log('Finding and logging the index of "Earth" in the planets array');
+    planets.IndexofEarth =
+
+    console.log("Reversing the array)" +
+    planets.reverse();
+    console.log(planets);
 
     console.log(planetsArray);
 
@@ -26,8 +48,8 @@
      * list. You will need an opening AND closing <ul> tags around the entire
      * string, and <li> tags around each planet.
      */
-    var brokenPlanets = planetsArray.join("<br>")
-    console.log(brokenPlanets);
+    var planetsBrokenString = planetsArray.join("<br>")
+    console.log(planetsBrokenString);
 
     var planetsList = "<ul>\n<li>";
     planetsList += planetsArray.join("</li>\n<li>");

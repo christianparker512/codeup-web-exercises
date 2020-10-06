@@ -3,7 +3,7 @@
 
 function returnMultiplicationTable(input){
     var result ="";
-    for (let i =1, i <=10; i++){
+    for (var i = 1; i <= 10; i++){
         result += input + 'x ' + i + ' = ' + (input * i);
             if (i<10) {
                 result += '\n';

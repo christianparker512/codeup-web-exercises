@@ -1,241 +1,230 @@
-"use strict";
-console.log("Welcome to Intro to Objects!");
+(function() {
+    "use strict";
 
-/*********************************************
- *              INTRO TO OBJECTS
- ******************************************** */
+    /**
+     * TODO:
+     * Create an object with firstName and lastName properties that are strings
+     * with your first and last name. Store this object in a variable named
+     * `person`.
+     *
+     * Example:
+     *  > console.log(person.firstName) // "Rick"
+     *  > console.log(person.lastName) // "Sanchez"
+     */
+    var person = {
+        firstName: "Chris",
+        lastName: "Parker",
+    };
 
-/**
- * Objects are an unordered collection of related data in the form of
- * key:value pairs
- */
-
-
-/*********************************************
- *              CREATING NEW OBJECTS
- ******************************************** */
-
-/**
- * Objects can be created in JavaScript through the use of the 'new
- * Object()' constructor, or Object literal notation using curly braces.
- */
-var rubberDuck = {
-    color: "yellow",
-    role: "emotional support",
-    name: "cody"
-}
-console.log(rubberDuck);
-/**
- * TODO TOGETHER: Create a new variable (of type Object) and call it 'myPhone'. Use either the constructor or Object literal notation.
- */
-// var myPhone = {
-//     color: "gun metal gray",
-//     model: "iPhone X",
-//     storage: "64G",
-//     ring: function (){
-//         console.log("Ring, Ring!");
-//     }
-//     picture: function() {
-//         console.log("Take a picture!")
-//     }
-//     };
-// console.log(myPhone.color);
-// console.log(myPhone.model);
-// console.log(myPhone.storage);
-// myPhone.ring();
-// myPhone.picture();
-
-// The object always comes first in the call
-/**
- *
-// object instance
-
- var myPhone = new Object();
- console.log (myPhone);
- myPhone.color = "gold"';
- myPhone.model = "iPhone X";
- myPhone.storage = "64g"
- myPhone.ring = function(){
-
-};
-
- console.log(myPhone);
- myPhone.ring();
-
- * TODO: Create a new Object and call it 'myMac'. use either the constructor or Object literal notation.
- */
-var myMac = {
-    color: "Silver",
-    memory: "1 TB",
-    size: "16 inch"
-};
-console.log(myMac);
-/*********************************************
- *              PROPERTIES
- ******************************************** */
-
-/**
- * TO DO TOGETHER: Using dot notation, assign these properties to your phone
- * Object: 'model', 'color', 'storage'. Console log your phone variable to
- * check that the information was stored properly.
- */
-
-/**
- * TO DO: Using dot notation, assign these properties to your Mac
- * Object: 'model', 'size', 'year', Console log the Object to check if the
- * information was stored properly
- */
-
-/**
- * TO DO TOGETHER: Assign a 'name' property to your phone. This should be of
- * type Object and store properties for the user's 'firstName' and
- * 'lastName'. Use console log to access the user's 'lastName'
- */
-// myPhone.name = {
-//     firstName: "Christian",
-//     lastName: "Parker"
-// };
-//
-// console.log(myPhone);
-// console.log(myPhone.name);
-// console.log(myPhone.name.firstName);
-//
-// myPhone.apps = ["Slack", "Instagram", "YouTube"];
-// console.log(myPhone);
-// console.log(myPhone.apps[1]);
-//
-// myPhone.apps.forEach(function(app){
-//     console.log(app);
-// });
-/**
- * TO DO: Using dot notation, assign a property called 'folders' that stores
- * an Array representing different folders in your system.
- */
-// myMac.folders = ["Desktop", "Downloads", "Applications", "iCloud Drive"]
-// console.log(myMac[3]);
-// /**
-//  * TO DO: Assign a 'login' property. This should be an object that stores
-//  * 'username','fakePassword' and 'email'
-//  */
-// myMac.log = {
-//     userName: "username",
-//     fakePassword: "fakePassword",
-//     email: "cmp81670@gmail.com"
-// };
-/*********************************************
- *                  METHODS
- ******************************************** */
-
-/**
- * TO DO TOGETHER: We are going to add functionality to our phone Object.
- * Using the dot notation, add a method named 'call' that console logs the
- * message: "Dialing..."
- */
-// myPhone.call = function () {
-//     console.log("dialing");
-// };
-// myPhone.call();
-// // /**
-//  * TO DO: Let's add functionality to our Mac Object. Create a method named
-//  * 'powerOn'. When called, this should display a console message that says
-//  * "Powering on..."
-//  */
-// myMac.powerOn = function() {
-//     console.log("Powering On")
-// }
-/**
- * TO DO TOGETHER: Let's add one more piece of functionality. Create a
- * method on the phone object that returns a message displaying the user's
- * firstName and lastName. Hint: use the 'this' keyword.
- */
-// myPhone.currentUser = function () {
-//     console.log("Current user: " + this.name.firstName + this.name.lastName);
-// };
-// myPhone.currentUser();
-
-/**
- * TO DO: One last thing. Let's add a 'currentUser' method that displays the
- * Mac user's 'username' and 'email'. Use the 'this' keyword to reference
- * the properties we created earlier.
- */
-// myMac.currentUser = function () {
-//     console.log("Current user: " + this.login.userName + this.login.email);
-// };
-// myMac.currentUser();
+console.log(person.firstName);
+console.log(person.lastName);
+    /**
+     * TODO:
+     * Add a sayHello method to the person object that returns a greeting using
+     * the firstName and lastName properties.
+     * console.log the returned message to check your work
+     *
+     * Example
+     * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
+     */
 
 
-/*********************************************
- *                  NESTED VALUES
- ******************************************** */
-
-/**
- * Because an Object is a collection of data and functionality, very often
- * we will see nested values. This can mean an Array of Objects containing
- * Arrays, Objects containing other Objects and so on.
- *
- * It is important to understand the shape of our data so that we can
- * navigate through it.
- */
+    person.sayHello = function(){
+        return "Hello from  " + this.firstName + " " + this.lastName;
+    };
 
 
-/*********************************************
- *                  ARRAYS OF OBJECTS
- ******************************************** */
 
-/**
- * If we have an Array of Objects, we can iterate through it to access each
- * Object element and pull the properties and methods that we need.
- */
-// it's going to tie in with nested values.
-var chooseYourFighter = [
-    {
-        name: {
-            firstName: "Spongebob",
-            lastName: "Squarepants"
+    console.log(person.sayHello());
+    console.log("\n");
+    /** TODO:
+     * HEB has an offer for the shoppers that buy products amounting to
+     * more than $200. If a shopper spends more than $200, they get a 12%
+     * discount. Write a JS program, using conditionals, that logs to the
+     * browser, how much Ryan, Cameron and George need to pay. We know that
+     * Cameron bought $180, Ryan $250 and George $320. Your program will have to
+     * display a line with the name of the person, the amount before the
+     * discount, the discount, if any, and the amount after the discount.
+     *
+     * Uncomment the lines below to create an array of objects where each object
+     * represents one shopper. Use a foreach loop to iterate through the array,
+     * and console.log the relevant messages for each person
+     */
+
+    var shoppers = [
+        {
+            name: 'Cameron',
+            amount: 180},
+        {
+            name: 'Ryan',
+            amount: 250
         },
-        catchPhrase: function(){
-            return "I'm Ready";
-        },
-        abilities: ["Karate", "Bubble Blowing", "Jelly Fishing"]
-
-    },
-    {
-        name: {
-            firstName: "Patrick",
-            lastName: "Star"
-        },
-        catchPhrase: function(){
-            return "No, this is Patick";
-        },
-        abilities: ["Rock hiding", "Secret Photo", "Wumbo"]
-    },
-    {
-        name: {
-            firstName: "Eugene",
-            lastName: "Krabs"
-        },
-        catchPhrase: function(){
-            return "Money";
-        },
-        abilities: ["Fake Money", "Money", "Tiny Violin"]
-    },
-    {
-        name: {
-            firstName: "Squidward",
-            lastName: "Tentacles"
-        },
-        catchPhrase: function(){
-            return "Nasal Noise";
-        },
-        abilities: ["Bad Music", "Nag", "Squiding"]
-    }
+        {
+            name: 'George',
+            amount: 320}
     ];
-chooseYourFighter.forEach(function(fighter){
-  console.log(fighter.name.firstName + ": " + fighter.catchPhrase());
-  console.log("Their abilities: ");
 
-  fighter.abilities.forEach(function(ability){
-      console.log(ability);
-  });
-  console.log("-----------------")
-});
+    shoppers.forEach(function(shopper) {
+        const discountRate = .12;
+        const discountThreshold = 200;
+        var discountedAmount = 0;
+        var finalAmount;
+
+        if (shopper.amount >= discountThreshold) {
+            discountedAmount = (shopper.amount * discountRate).toFixed(2);
+            finalAmount = (shopper.amount - discountedAmount).toFixed(2);
+        } else {
+            discountedAmount = discountedAmount.toFixed(2);
+            finalAmount= shopper.amount.toFixed(2);
+        }
+        console.log(shopper.name + " has spent $" +shopper.amount.toFixed(2) + " today at H.E.B and has earned a total discount of $" + discountedAmount +".")
+    })
+
+    // Sophie's solution.
+    // shoppers.forEach(function(shopper){
+    //     var initialAmount = shopper.amount;
+    //     var discount = shopper.amount * .12;
+    //     var finalAmount = initialAmount - discount;
+    //
+    //     if(initialAmount > 200) {
+    //         console.log(shopper.name + "spent " + initialAmount + ". They get a discount of " + discount + ". The total paid was: " + finalAmount);
+    //     } else {
+    //         console.log(shopper.name + " paid" + initialAmount + ". Because they didn't spend $200, they didn't receive any discount.");
+    //     }
+    // })
+
+    // * Create an array of objects that represent books and store it in a
+    // * variable named `books`. Each object should have a title and an author
+    // * property. The author property should be an object with properties
+    // * `firstName` and `lastName`. Be creative and add at least 5 books to the
+    // * array
+    // *
+    // * Example:
+    // * > console.log(books[0].title) // "The Salmon of Doubt"
+    // * > console.log(books[0].author.firstName) // "Douglas"
+    // * > console.log(books[0].author.lastName) // "Adams"
+    // */
+
+    /**
+     * TODO:
+     * Loop through the books array and output the following information about
+     * each book:
+     * - the book number (use the index of the book in the array)
+     * - the book title
+     * - author's full name (first name + last name)
+     *
+     * Example Console Output:
+     *
+     *      Book # 1
+     *      Title: The Salmon of Doubt
+     *      Author: Douglas Adams
+     *      ---
+     *      Book # 2
+     *      Title: Walkaway
+     *      Author: Cory Doctorow
+     *      ---
+     *      Book # 3
+     *      Title: A Brief History of Time
+     *      Author: Stephen Hawking
+     *      ---
+     *      ...
+     */
+    var books = [
+        {
+            title: "iPads in the Art Room",
+            author: {
+                firstName: "Cathy",
+                lastName: "Hunt"
+            }
+        },
+        {
+            title: "Who Moved My Cheese?",
+            author: {
+                firstName: "Spencer",
+                lastName: "Johnson"
+            }
+        },
+        {
+            title: "Lonesome Dove",
+            author: {
+                firstName: "Larry",
+                lastName: "McMurtry"
+            }
+        },
+        {
+            title: "The Art of Not Giving a F*ck",
+            author: {
+                firstName: "Mark",
+                lastName: "Manson"
+            }
+        },
+        {
+            title: "Steam Power",
+            author: {
+                firstName: "Tim",
+                lastName: "Needles"
+            }
+        }
+    ]
+
+
+    /**
+     * Bonus:
+     * - Create a function named `createBook` that accepts a title and author
+     *   name and returns a book object with the properties described
+     *   previously. Refactor your code that creates the books array to instead
+     *   use your function.
+     * - Create a function named `showBookInfo` that accepts a book object and
+     *   outputs the information described above. Refactor your loop to use your
+     *   `showBookInfo` function.
+     */
+    //refactored solution: creating an empty book object and using dot notation
+
+    books.forEach(function(book,i){
+        var output = "";
+        output += "book# " + (i +1) + "\n";
+        output += "title # " + book.title + "\n";
+        output += "author # " + book.author.firstName + " " + book.author.lastName + "\n";
+        output += "---";
+        console.log(output);
+    });
+
+
+    books.createBook();
+    console.log("\n");
+    function showBookInfo(book, i){
+        console.log("Book #: " + (i + 1));
+        console.log("Title: " + book.title);
+        console.log("Author: " + book.author.firstName + " " + book.author.lastName)
+        console.log("\n");
+    }
+    books.forEach(showBookInfo);
+
+    function createBook(title, first, last){
+        var book = {
+            title: title,
+            author: {
+                firstName: first,
+                lastName: last
+            }
+
+        };
+    }
+    book.title = prompt('What is the title of the book?');
+    //     book.firstName = prompt("What is the author's first name?");
+    //     book.lastName = prompt("What is the author's last name?");
+    //     console.log("Title: " + book.title + " Author: " + book.firstName + " " + book.lastName);
+    // }
+    //
+    createBook();
+    books.push(createBook("Cat's Crade","Kurt", V"));
+
+   function showBookInfo(book,i){
+        var output = "";
+        output += "Book# " + (i +1) + "\n";
+        output += "Title # " + book.title + "\n";
+        output += "Author # " + book.author.firstName + " " + book.author.lastName + "\n";
+        output += "---";
+        console.log(output);
+    }
+})();

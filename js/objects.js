@@ -16,7 +16,8 @@
         lastName: "Parker",
     };
 
-
+console.log(person.firstName);
+console.log(person.lastName);
     /**
      * TODO:
      * Add a sayHello method to the person object that returns a greeting using
@@ -29,8 +30,10 @@
 
 
     person.sayHello = function(){
-        return "Hello from  " + person.firstName + " " + person.lastName;
+        return "Hello from  " + this.firstName + " " + this.lastName;
     };
+
+
 
     console.log(person.sayHello());
     console.log("\n");
@@ -77,6 +80,18 @@
         console.log(shopper.name + " has spent $" +shopper.amount.toFixed(2) + " today at H.E.B and has earned a total discount of $" + discountedAmount +".")
     })
 
+    // Sophie's solution.
+    // shoppers.forEach(function(shopper){
+    //     var initialAmount = shopper.amount;
+    //     var discount = shopper.amount * .12;
+    //     var finalAmount = initialAmount - discount;
+    //
+    //     if(initialAmount > 200) {
+    //         console.log(shopper.name + "spent " + initialAmount + ". They get a discount of " + discount + ". The total paid was: " + finalAmount);
+    //     } else {
+    //         console.log(shopper.name + " paid" + initialAmount + ". Because they didn't spend $200, they didn't receive any discount.");
+    //     }
+    // })
 
     // * Create an array of objects that represent books and store it in a
     // * variable named `books`. Each object should have a title and an author
@@ -164,16 +179,17 @@
      *   `showBookInfo` function.
      */
     //refactored solution: creating an empty book object and using dot notation
-    books.createBook = function (){
-        var newBook = {
-            title: prompt('What is the title of the book?'),
-            author: {
-                firstName: prompt("What is the author's first name?"),
-                lastName: prompt("What is the author's last name?")
-            }
-        };
-        books.push(newBook);
-    }
+
+    books.forEach(function(book,i){
+        var output = "";
+        output += "book# " + (i +1) + "\n";
+        output += "title # " + book.title + "\n";
+        output += "author # " + book.author.firstName + " " + book.author.lastName + "\n";
+        output += "---";
+        console.log(output);
+    });
+
+
     books.createBook();
     console.log("\n");
     function showBookInfo(book, i){
@@ -184,4 +200,31 @@
     }
     books.forEach(showBookInfo);
 
+    function createBook(title, first, last){
+        var book = {
+            title: title,
+            author: {
+                firstName: first,
+                lastName: last
+            }
+
+        };
+    }
+    book.title = prompt('What is the title of the book?');
+    //     book.firstName = prompt("What is the author's first name?");
+    //     book.lastName = prompt("What is the author's last name?");
+    //     console.log("Title: " + book.title + " Author: " + book.firstName + " " + book.lastName);
+    // }
+    //
+    createBook();
+    books.push(createBook("Cat's Crade","Kurt", V"));
+
+   function showBookInfo(book,i){
+        var output = "";
+        output += "Book# " + (i +1) + "\n";
+        output += "Title # " + book.title + "\n";
+        output += "Author # " + book.author.firstName + " " + book.author.lastName + "\n";
+        output += "---";
+        console.log(output);
+    }
 })();

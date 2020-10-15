@@ -168,6 +168,29 @@
         <label>D <input type="radio" name="quiz-question-1" value="d"></label>
         <br>
     </fieldset>
-    <!-- Selects (with or without…
+    <!-- Selects (with or without multiple option) -->
+    <h4>Select Inputs</h4>
+    <label for="coffee-preference">Coffee Preference</label>
+    <select id="coffee-preference" name="coffee-preference">
+        <option value="light">Light Roast</option>
+        <option value="dark">Dark Roast</option>
+        <option value="espresso">Espresso Blend</option>
+    </select>
 
-https://hookbin.com/
+    <!-- Required -->
+    <label for="firstName">First Name</label>
+    <input id="firstName" name="firstName" type="text" required>
+
+    <!-- Disabled -->
+    <label for="lastName">Last Name</label>
+    <input id="lastName" name="lastName" type="text" disabled>
+
+    <!-- Submit Button -->
+    <div>
+        <button>Submit</button>
+    </div>
+
+</form>
+
+</body>
+</html>

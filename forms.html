@@ -2,44 +2,52 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Register With Us</title>
+    <title>Veridian Dynamics: Register With Us</title>
 </head>
 <body>
 <h1>Register With Us</h1>
 </body>
-<form method="post" action="https://request-inspector.glitch.me/">
 
-    <label for="username">Username</label>
-    <input id="username" name="username" type="text">
-    <br>
-
+    <header>
+        <h1> Register Page</h1>
+    </header>
+<main>
+    <form method="post" action="https://request-inspector.glitch.me/">
+    <label for="email">Email</label>
+    <input name="email" type="email" id="email" placeholder="Enter Email" >
     <label for="password">Password</label>
-    <input id="password" name `="password" type="password">
-    <br>
+    <input type="password" name ="password"id="password" placeholder="Enter password">
+
     <hr>
-    <input type="submit">
     <h4>Text area</h4>
     <textarea id="bio" name="bio" rows="4" cols="50" placeholder="Write a bio here..."></textarea>
     <hr>
     <h4>How did you hear about us?</h4>
     <fieldset>
         <legend>Select Answer</legend>
-        <label>A <input type="radio" name="billboard" value="a"></label>
+        <label><input type="radio" id = "Billboard" name="about-us" value="a">BillBoard</label>
         <br>
-        <label>B <input type="radio" name="radio advertisement" value="b"></label>
+        <label><input type="radio" id="Radio Advertisement" name="about-us" value="b">Radio Advertisement</label>
         <br>
-        <label>C <input type="radio" name="internet advertisement" value="c"></label>
+        <label><input type="radio" id = "Internet Advertisement" name="about-us" value="c">Internet Advertisement</label>
         <br>
-        <label>D <input type="radio" name="other" value="d"></label>
+        <label><input type="radio" id = "other" name="about-us" value="d">Other</label>
         <br>
     </fieldset>
     <hr>
     <h4>Which web browser are you using?</h4>
-    <label for="web-browser">Coffee Preference</label>
-    <select id="web-browser" name="web-browser">
+    <label for="web-browser">Browser Choices</label>
+    <select name="web-browser" id="web-browser" >
         <option value="Safari">Safari</option>
         <option value="Chrome">Chrome</option>
         <option value="Internet Explorer">Internet Explorer</option>
+        <option value="Internet Explorer">Firefox</option>
+        <option value="Internet Explorer">Brave</option>
     </select>
+    <hr>
+    <br>
+    <button>Submit</button>
+
 </form>
+</main>
 </html>

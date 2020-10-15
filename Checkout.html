@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+</head>
+<body>
+Make a file named checkout.html. This will be a form for a credit card checkout
+
+Make all fields required except for the checkbox
+Add an input for credit card number, expiration month/year, and security code
+Add inputs for the billing address
+Add a checkbox that says "Keep this credit card on file for future transactions"
+<!--The submit button's text should say "Buy Now!"-->
+
+<form method="post" action="https://request-inspector.glitch.me/">
+
+    <label for="creditCardNumber">Credit Card #</label>
+    <input id="creditCardNumber" name="creditCardNumber" type="text">
+    <br>
+
+    <label for="securityCode">Security Code</label>
+    <input id="securityCode" name ="securityCode" type="securityCode">
+    <br>
+    <label for="confirmpassword">Confirm Password</label>
+    <input id="confirmpassword" name="password" type="password">
+    <br>
+    <label>Keep this credit card on file for future transactions<input type="radio" name="storeCard" value="storeCard"></label>
+    <hr>
+    <button>Buy Now!</button>>
+</form>
+</body>
+</html>

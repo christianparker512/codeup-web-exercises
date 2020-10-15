@@ -5,18 +5,50 @@
     <title>property search</title>
 </head>
 <body>
-<!--Make a file named property-search.html. This will be a form for a property search.-->
+<h1>Property Search</h1>
+<hr>
+<div>
+    <label>Security Code <input type = "text" name = "securityCode" id = "securityCode"></label>
+</div>
+    <h4>Which type of property are you looking for??</h4>
+<label for="propertyTypes">Browser Choices</label>
+<select name="propertyTypes" id="propertyTypes" >
+    <option value="House">House</option>
+    <option value="Duplex">Duplex</option>
+    <option value="Condo">Condo</option>
+    <option value="Apartment">Apartment</option>
+    <option value="CardboardBox">CardboardBox</option>
+</select>
 
-Add all the appropriate inputs you would need to conduct a property search:
-securityCode
-Property type
-square footage
-min_price
-max_price
-zipcode
-number of bedrooms
-number of bathrooms
-etc...
-The submit button's text should say "Search now"
+<hr>
+<fieldset>
+    <legend>Square Footage</legend>
+    <label><input type="radio" id = "verrysmall" name="property" value="0-500">0-500 (cardboard box)</label>
+    <br>
+    <label><input type="radio" id="small" name="property" value="501-1000">501-1000 sq. foot</label>
+    <br>
+    <label><input type="radio" id = "medium" name="property" value="1001-1500">1001-1500 sq foot</label>
+    <br>
+    <label><input type="radio" id = "large" name="property" value="2000-2500">Large house (2000-2500 sq. foot)</label>
+    <br>
+    <label><input type="radio" id = "xlarge" name="property" value="2500 and bigger">Big House(Bigger than 2500 sq. foot)</label>
+    <br>
+    <br>
+    <label>Number of Bedrooms <input type = "text" name = "numberBedrooms" id = "numberBedrooms"></label>
+    <br>
+    <label>Number of Bathrooms<input type = "text" name = "numberBathrooms" id = "numberBathrooms"></label>
+    <br>
+</fieldset>
+<br>
+<label>What's your Minimum Price? <input type = "text" name = "minPrice" id = "nminPrice"></label>
+<br>
+<label>What's your Max Price?<input type = "text" name = "maxPrice" id = "maxPrice></label>
+
+<hr>
+<label>Zip Code <input type = "text" name = "zipcode" id = "zipcode"></label>
+<form method="post" action="https://request-inspector.glitch.me/">
+<hr>
+<button>Submit your life away</button>
+</form>
 </body>
 </html>

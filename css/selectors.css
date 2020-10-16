@@ -11,10 +11,11 @@ selector-todo {
 h1.fancy-header {
     color: blue;
     text-decoration: underline;
+    font-weight: bold;
 }
 
 /* selector for all "em" elements */
-selector-todo {
+.em {
     font-weight: bold;
 }
 

@@ -4,4 +4,48 @@
 }
 h1 {
     color: purple;
+    text-align:center;
+    text-decoration: underline;
+}
+body {
+    background-image: url("../img/Realtors.jpg");
+}
+h2 {
+    text-decoration: underline;
+}
+* {
+    /*background-color: cornflowerblue;*/
+    font-family: "Montserrat", Helvetica;
+}
+
+body {
+    background-image: url("../img/Realtors.jpg");
+}
+
+ul {
+    list-style: circle;
+}
+td{
+    padding: 70px;
+}
+tr {
+    font-size: 2em;
+}
+a:link {
+    color:red;
+}
+
+/* visited link (:visited) */
+a:visited {
+    color:black;
+}
+
+/* mouse hover over link (:hover) */
+a:hover {
+    color:blue;
+}
+
+/* active/selected link (:active) */
+a:active {
+    color:green;
 }

@@ -18,6 +18,7 @@ body, html {
 }
 header {
     background-image: url("https://picsum.photos/1200/300");
+    /*background-image: url("../img/garden.jpg") width="10%");*/
     background-size: cover;
     min-height: 300px;
     padding-top: 275px;
@@ -39,21 +40,48 @@ a {
     padding: 0;
     margin: 0;
 }
+.nav-item{
+    padding: 1.5em;
+    display: inline-block;
+}
 .nav-link {
     color: var(--main-link-color);
     font-weight: bold;
     text-decoration: none;
+
 }
 .nav-link:hover {
     color: var(--link-color);
 }
+.profile-details{
+    width: calc(25% - 1em);
+    float: left;
+    margin: 0 .5em;
+}
+.timeline{
+    float: left;
+    width: calc(50% - 1em);
+    margin: 0 .5em;
+}
+
 .profile {
     background: var(--light-bg);
     height: 80px;
 }
 .profile-image {
     position: absolute;
-    top: 17em;
+    top: 15em;
+}
+.profile-form {
+    float: right;
+    height: 80px;
+}
+.profile-items {
+    list-style: none;
+    padding: 0;
+}
+.profile-entry {
+    margin: .5em
 }
 .btn {
     border: 1px solid var(--main-link-color);
@@ -66,19 +94,47 @@ a {
 .btn-large {
     font-size: 1.3em;
     padding: 10px;
+    position: relative;
+    top: 1em;
+    right: 1em;
+
 }
 .img-circle {
     border-radius: 100%;
     border: 4px solid var(--light-bg);
+    float:left;
 }
-.text-right {
+.text-right{
     text-align: right;
 }
 .text-muted {
     color: var(--main-link-color);
+
 }
 
 .who-to-follow{
-    float: right;
-    width: calc(25% - 1em);
+    float: left;
+    width: calc(25% - 8);
+    margin: 0 .5em;
+}
+.container{
+    padding-top: 2em;
+    position: relative;
+}
+.media {
+    width: 100%;
+    background-color: var(--light-bg);
+    border: 1px solid var(--separator-color);
+    padding: .5em;
+    overflow: auto;
+}
+.media-image{
+    max-width: 50px;
+    margin-top: 1.33em;
+    float: left;
+
+}
+.media-body{
+    width: calc(100% - 50px);
+    float: left;
 }

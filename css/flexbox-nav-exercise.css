@@ -47,10 +47,7 @@ ul li a {
     text-decoration: none;
     display: inline-block;
     padding: 1.5em;
-
-
 }
-
 a:hover {
     color: blue;
 }

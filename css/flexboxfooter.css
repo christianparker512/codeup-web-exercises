@@ -1,0 +1,63 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    margin: 0;
+    flex-direction: column;
+}
+
+footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(122, 122, 122);
+}
+
+.footerRowContainerTop{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footerRowContainerBottom{
+    display: flex;
+    justify-content: center;
+    margin: 30px 0 0 0;
+}
+
+.otherContainer{
+    display: flex;
+    justify-content: space-around;
+}
+
+.footerCol{
+    padding: 50px 25px
+}
+
+hr{
+    margin: auto 25px;
+}
+
+ul{
+    list-style: none;
+}
+
+.logoContainer{
+    display: flex;
+    align-items: center;
+}
+
+.iconContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.footerCol > p{
+    margin:  0;;
+}
+
+.logoIconThingy{
+    font-size: 50px;
+}
+
+.iconContainer > i{
+    font-size: 25px;
+}

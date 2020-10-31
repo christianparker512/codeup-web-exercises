@@ -1,0 +1,26 @@
+.jumbotron{
+    background-image: url("../img/snow.jpg");
+    background-size: cover;
+    background-position: center;
+}
+a:hover{
+    color: saddlebrown;
+    font-size: 1.5em;
+}
+.navbar-nav{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+hr {
+    height: .5vh;
+    margin: 2em auto;
+    background-color: saddlebrown;
+}
+@media screen and (min-width: 768px){
+    .navbar-nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

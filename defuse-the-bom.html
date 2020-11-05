@@ -46,3 +46,118 @@
 </script>
 </body>
 </html>
+
+
+
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Defuse the BOM</title>
+    <link rel="stylesheet" href="css/defuse-the-bom.css">
+</head>
+<body>
+
+    <h2 id="message">(Cue the Mission Impossible Theme Song) This BOM will self destruct in ....<span id="timer">60</span> seconds...</h2>
+
+    <div class="bomb">
+        <img src="img/bomb.png" alt="bomb">
+    </div>
+
+    <div class="wires">
+<p>What are you going to do?</p>
+        <button id="blueWire" class="wire">Cut the BLUE wire?!?!</button>
+        <button id="greenWire" class="wire">Cut the GREEN wire?!?!</button>
+        <button id="redWire" class="wire">Cut the RED wire?!?!</button>
+        <button id="yellowWire" class="wire">Cut the YELLOW wire?!?!</button>
+    </div>
+
+    <button id="defuser">Defuse the BOM</button>
+
+<script>
+    (function() {
+        "use strict";
+        var detonationTimer = 60;
+
+        // TODO: This function needs to be called once every second
+        var intervalID = setInterval(function updateTimer() {
+            if (detonationTimer == 0) {
+                alert('EXTERMINATE!');
+                document.body.innerHTML = '<img class="aftermath" src="img/boom.jpeg">';
+                var delay = 5000;
+                var timeoutId = setTimeout(function () {
+                    var userResponse = confirm('Pick yourself up, put yourself back together, and try again?');
+                    if(userResponse){
+                        location.reload()
+                    }
+                }, delay);
+            } else if (detonationTimer > 0) {
+                document.getElementById('timer').innerHTML = detonationTimer;
+            }
+            detonationTimer--;
+        }, 1000)
+
+        var blueWire = document.getElementById('blueWire')
+        blueWire.addEventListener('click', cutBlue)
+        function cutBlue() {
+            detonationTimer -= 30;
+            if(detonationTimer < 0){
+                detonationTimer = 0
+            } else {
+                alert("Wrong. Never trust a smurf! You just lost 30 seconds!! Nice knowing ya!!!")
+            }
+            document.getElementById("blueWire").style.display = "none";
+        }
+        var greenWire = document.getElementById('greenWire')
+        greenWire.addEventListener('click', cutGreen)
+        function cutGreen() {
+            alert("The color of the hulk? It's NEVER the GREEN!!!")
+            detonationTimer = 0;
+            document.getElementById("greenWire").style.display = "none";
+        }
+        var yellowWire = document.getElementById('yellowWire')
+        yellowWire.addEventListener('click', cutYellow)
+        function cutYellow() {
+            detonationTimer -= 15;
+            if(detonationTimer < 0){
+                detonationTimer = 0
+            } else {
+                alert("You just lost 15 seconds!! Think FAST!!!")
+            }
+            document.getElementById("yellowWire").style.display = "none";
+        }
+        var redWire = document.getElementById('redWire')
+        redWire.addEventListener('click', cutRed)
+        function cutRed() {
+            alert("Good job! You're my hero! Crisis adverted.")
+            document.body.innerHTML = '<img class="aftermath" src="img/success.jpg">';
+            clearInterval(intervalID);
+            var delay = 5000;
+            var timeoutId = setTimeout(function () {
+                var userResponse = confirm('Do you want to try again?');
+                if(userResponse){
+                    location.reload()
+                }
+            }, delay);
+        }
+
+
+
+
+        // TODO: When this function runs, it needs to
+        // cancel the interval/timeout for updateTimer()
+        function defuseTheBOM() {
+            clearInterval(intervalID)
+        }
+
+        // Don't modify anything below this line!
+        //
+        // This causes the defuseTheBOM() function to be called
+        // when the "defuser" button is clicked.
+        // We will learn about events in the DOM lessons
+        var defuser = document.getElementById('defuser');
+        defuser.addEventListener('click', defuseTheBOM);
+    })();
+</script>
+</body>
+</html> -->

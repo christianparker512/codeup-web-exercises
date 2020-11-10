@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Jquery</title>
+</head>
+<body>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script>
+    // My own custom javascript - jquery goes above
+    // 1. wrap the code in a function to protect code from the global scope
+    // 2. wait to run your code until the DOM is fully loaded but pictures are loaded up
+   // No more reason to use the IIFE
+    $(document).ready(function(){
+        "use strict";
+    // Changing tesxt/html
+        document.getElementByTagName("element")[0].innerHTML = "Hello World"
+        $("element").html("Hello World);
+    })
+
+
+</script>
+</body>
+</html>

@@ -8,12 +8,12 @@
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 
 <main class="container"></main>
-<h1>Christian Parker</h1>
+<h1 class="me">Christian Parker</h1>
 <br>
 <h3>Christmas for the Family</h3>
 <div id="theFamily">
     <div id="chrisFamily">
-        <p class="parent">Me</p>
+        <p class="adult">Me</p>
             <ul>
                 <li>iWatch/iPhone bedside Table</li>
                 <li>Light knit robe</li>
@@ -23,7 +23,7 @@
                 <li>Boxer Briefs</li>
                 <li>Hard Top Yeti Cooler</li>
             </ul>
-        <p class="chrisElder">Mom</p>
+        <p class="parent">Mom</p>
             <ul>
                 <li>Venus CBD Bath Salts</li>
                 <li>Carpet</li>
@@ -38,7 +38,7 @@
                      <li>Skin Care</li>
                      <li>Head Hawaiian Shirts</li>
                 </ul>
-            <p class="chrisElder">Grandma Warner</p>
+            <p class="parent">Grandma Warner</p>
                 <ul>
                      <li>Cardigan Sweater size large</li>
                      <li>Moose Munch</li>
@@ -48,20 +48,20 @@
                 </ul>
         </div>
         <div id="lisaFamily">
-            <p class="parent">Lisa</p>
+            <p id="adult">Lisa</p>
                 <ul>
                     <li>Venus CBD Bath Salts</li>
                     <li>Engraved Yeti</li>
                     <li>Head Hawaiian Shirts</li>
                 </ul>
-            <p class="lisaElder">Mel</p>
+            <p class="parent">Mel</p>
                  <ul>
                     <li>Engraved cutting board</li>
                     <li>Steak</li>
                     <li>Engraved Yeti</li>
                     <li>Man Cave Candles</li>
                  </ul>
-             <p class="lisaElder">Marnie</p>
+             <p class="parent">Marnie</p>
                 <ul>
                     <li>Engraved Yeti</li>
                 </ul>
@@ -86,13 +86,11 @@
                     <li>Clear Purse</li>
                     <li>Head Hawaiian Shirts</li>
                 </ul>
-            <p id="lisaKid">Alec</p>
+            <p class="lisaKid">Alec</p>
             <ul>
                 <li>Vegan cooking shit</li>
                 <li>Head Hawaiian Shirts</li>
-                <li></li>
-                <li></li>
-                <li></li>
+
             </ul>
         </div>
     </div>
@@ -100,7 +98,23 @@
     // $(document).ready(function() {
     //     alert( 'The DOM is now loaded!' );
         // INSERT JAVASCRIPT CODE SAMPLE HERE
+    src="https://code.jquery.com/jquery-2.2.4.js"
+    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
 
+<!-- Bootstrap Core JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Custom JS -->
+<script>
+$('container').css('background-image', 'img/sunrise.jpeg');
+$('h1').css('background-color', 'red');
+$('#chrisKid').css('color', 'blue')
+$('#chrisFamily').css('color', 'green');
+$('.lisaKid, .chrisKid').css('color', 'white')
+             .css('background-color','blue')
+             .css('font-family', 'arial');
+$('.parent').css('border', '1 px solid red');
 
 </script>
 </body>

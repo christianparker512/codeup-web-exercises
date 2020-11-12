@@ -53,12 +53,10 @@
         // Event Handler / Listener Function Review from JavaScript
 
         // with anon function
-
-        // var mainContainer = document.getElementById('container');
+        // can assign a variable.
+        //     add event listener.
+        //     when it clicks,it fires off (e) or also called event object.
         //
-        // mainContainer.addEventListener("click", function(e) {
-        //     console.log(e);
-        // });
 
         // with defined handler
 
@@ -75,8 +73,21 @@
 
         // $('#container').click(function(e) {
         //     console.log(e);
+        //     console.log("clicked red box");
         // });
-
+        //
+        // function someFunction(x){
+        //     console.log(x);
+        //     //generate and event object
+        //     var eventObject = {};
+        //     someFunction(eventObject);
+        //
+        // }
+        //
+        // var someArr = [1,2,3];
+        // someArr.forEach(function(element,index,array){
+        //     console.log(element);
+        // });
 
 
         // jQuery with defined handler
@@ -87,7 +98,16 @@
         //
         // $('#container').click(logEventOb);
 
+        // $('#box').dblclick(function(){
+        //     $('#box').css('background','green');
+        // });
 
+        // $('p').dblclick(function(){
+        //     // console.log(this);
+        //     // console.log(e.target);
+        //     // $('p').css('color', "'blue");
+        //     $(e.target).css('color','blue');
+        // })
         // Double click and using "this" or "e.target"
 
         // $('li').dblclick(function() {
@@ -104,18 +124,18 @@
 
         //SINGLE FUNCTION
 
-        // $('.box').hover(function() {
-        //     $(this).css('border-radius', '100px');
-        // });
+        $('.box').hover(function() {
+            $(this).css('border-radius', '100px');
+        });
 
 
         //TWO FUNCTIONS
 
-        // $('.box').hover(function() {
-        //     $(this).css('background', 'grey');
-        // }, function() {
-        //     $(this).css('background', 'red');
-        // });
+        $('.box').hover(function() {
+            $(this).css('background', 'grey');
+        }, function() {
+            $(this).css('background', 'red');
+        });
 
 
         /* extra practice problems

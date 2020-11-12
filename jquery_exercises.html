@@ -107,15 +107,59 @@
 
 <!-- Custom JS -->
 <script>
-$('container').css('background-image', 'img/sunrise.jpeg');
-$('h1').css('background-color', 'red');
-$('#chrisKid').css('color', 'blue')
-$('#chrisFamily').css('color', 'green');
-$('.lisaKid, .chrisKid').css('color', 'white')
-             .css('background-color','blue')
-             .css('font-family', 'arial');
-$('.parent').css('border', '1 px solid red');
+// $('container').css('background-image', 'img/sunrise.jpeg');
+// $('h1').css('background-color', 'red');
+// $('#chrisKid').css('color', 'blue')
+// $('#chrisFamily').css('color', 'green');
+// $('.lisaKid, .chrisKid').css('color', 'white')
+//              .css('background-color','blue')
+//              .css('font-family', 'arial');
+// $('.parent').css('border', '1 px solid red');
+// $('h1').click(function('background-color', ) {
+//     alert('h1 with id "codeup" was clicked');
 
+// $('#container').click(logEventOb);
+//
+// $('.lisaKid').dblclick(function(){
+//     $('lisaKid').css('background','green');
+// });
+
+//     $('h1').css({
+//         "background-color": "blue",
+//         "color": "yellow"// });
+// });
+// $('h1').hover(
+//     function() {
+//         $(this).css('background-color', 'red');
+//     },
+// function() {
+//
+//
+//         $(this).css('background-color', 'green');
+$(document).ready(function(){
+'use strict';
+
+$('h1').click(function(e){
+    $(this).css('background', 'red');
+});
+$('p').dblclick(function(e){
+    $(e.target).css('font-size', '18px');
+});
+$('li').hover(function(e){
+   $(e.target).css('color', 'red');
+}, function(e) {
+    // $(e.target).css('color','revert');
+    // $(e.target).css('color','inherit');
+    $(e.target).css('color','black');
+});
+});
+
+
+// $('p').dblclick(function(e) {
+//     alert('h1 with the id of "codeup" was double clicked!');
+// });
+// $('p').dblclick
+// // );
 </script>
 </body>
 </html>

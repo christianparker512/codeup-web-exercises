@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JQuery_Exercise</title>
+</head>
+<body>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<main class="container"></main>
+<h1 class="me">Christian Parker</h1>
+<br>
+<h3>Christmas for the Family</h3>
+<div id="theFamily">
+    <div id="chrisFamily">
+        <p class="adult">Me</p>
+            <ul>
+                <li>iWatch/iPhone bedside Table</li>
+                <li>Light knit robe</li>
+                <li>Luggage</li>
+                <li>Stumptown Coffee</li>
+                <li>Pillows</li>
+                <li>Boxer Briefs</li>
+                <li>Hard Top Yeti Cooler</li>
+            </ul>
+        <p class="parent">Mom</p>
+            <ul>
+                <li>Venus CBD Bath Salts</li>
+                <li>Carpet</li>
+                <li>Nightgown-LandsEnd</li>
+            </ul>
+            <p class="chrisKid">Abby</p>
+                <ul>
+                    <li>Taco Umbrella</li>
+                    <li>Books on tacos</li>
+                    <li>Steamer?</li>
+                     <li>Charcoal facial masks</li>
+                     <li>Skin Care</li>
+                     <li>Head Hawaiian Shirts</li>
+                </ul>
+            <p class="parent">Grandma Warner</p>
+                <ul>
+                     <li>Cardigan Sweater size large</li>
+                     <li>Moose Munch</li>
+                     <li>White Cheddar Beaver Nuggets</li>
+                     <li>Pink Striped Cookies</li>
+                     <li>Sea Salt Caramel</li>
+                </ul>
+        </div>
+        <div id="lisaFamily">
+            <p id="adult">Lisa</p>
+                <ul>
+                    <li>Venus CBD Bath Salts</li>
+                    <li>Engraved Yeti</li>
+                    <li>Head Hawaiian Shirts</li>
+                </ul>
+            <p class="parent">Mel</p>
+                 <ul>
+                    <li>Engraved cutting board</li>
+                    <li>Steak</li>
+                    <li>Engraved Yeti</li>
+                    <li>Man Cave Candles</li>
+                 </ul>
+             <p class="parent">Marnie</p>
+                <ul>
+                    <li>Engraved Yeti</li>
+                </ul>
+            <p class="lisaKid">Mitchell</p>
+                <ul>
+                    <li>Gourmet Hot Dog and Bun Toaster</li>
+                    <li>Beard Kit for Men Grooming</li>
+                    <li>Scented Candle-Rose</li>
+                    <li>Man Cave Candles</li>
+                    <li>Head Hawaiian Shirts</li>
+                </ul>
+            <p class="lisaKid">Carley</p>
+                <ul>
+                    <li>Name Plate for School</li>
+                    <li>Briefcase</li>
+                    <li>Head Hawaiian Shirts</li>
+                </ul>
+            <p class="lisaKid">Camryn</p>
+                <ul>
+                    <li>Dinosaur Taco holder</li>
+                    <li>Jim's shirt?</li>
+                    <li>Clear Purse</li>
+                    <li>Head Hawaiian Shirts</li>
+                </ul>
+            <p class="lisaKid">Alec</p>
+            <ul>
+                <li>Vegan cooking shit</li>
+                <li>Head Hawaiian Shirts</li>
+
+            </ul>
+        </div>
+    </div>
+<script>
+    // $(document).ready(function() {
+    //     alert( 'The DOM is now loaded!' );
+        // INSERT JAVASCRIPT CODE SAMPLE HERE
+    src="https://code.jquery.com/jquery-2.2.4.js"
+    integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI="
+    crossorigin="anonymous"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<!-- Custom JS -->
+<script>
+// $('container').css('background-image', 'img/sunrise.jpeg');
+// $('h1').css('background-color', 'red');
+// $('#chrisKid').css('color', 'blue')
+// $('#chrisFamily').css('color', 'green');
+// $('.lisaKid, .chrisKid').css('color', 'white')
+//              .css('background-color','blue')
+//              .css('font-family', 'arial');
+// $('.parent').css('border', '1 px solid red');
+// $('h1').click(function('background-color', ) {
+//     alert('h1 with id "codeup" was clicked');
+
+// $('#container').click(logEventOb);
+//
+// $('.lisaKid').dblclick(function(){
+//     $('lisaKid').css('background','green');
+// });
+
+//     $('h1').css({
+//         "background-color": "blue",
+//         "color": "yellow"// });
+// });
+// $('h1').hover(
+//     function() {
+//         $(this).css('background-color', 'red');
+//     },
+// function() {
+//
+//
+//         $(this).css('background-color', 'green');
+$(document).ready(function(){
+'use strict';
+
+$('h1').click(function(e){
+    $(this).css('background', 'red');
+});
+$('p').dblclick(function(e){
+    $(e.target).css('font-size', '18px');
+});
+$('li').hover(function(e){
+   $(e.target).css('color', 'red');
+}, function(e) {
+    // $(e.target).css('color','revert');
+    // $(e.target).css('color','inherit');
+    $(e.target).css('color','black');
+});
+});
+
+
+// $('p').dblclick(function(e) {
+//     alert('h1 with the id of "codeup" was double clicked!');
+// });
+// $('p').dblclick
+// // );
+</script>
+</body>
+</html>

@@ -29,3 +29,25 @@ div.row{
 .witch {
     color: pink;
 }
+
+.house {
+    background-color: purple;
+}
+
+.slytherin-house {
+    background-color: green;
+    color: silver;
+}
+
+.gryffindor-house {
+    background-color: red;
+    color: darkgoldenrod;
+}
+.hufflepuff-house {
+    background-color: darkgoldenrod;
+    color: blue
+}
+.ravenclaw-house {
+    background-color: blue;
+    color: saddlebrown;
+}

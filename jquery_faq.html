@@ -3,8 +3,196 @@
 <head>
     <meta charset="UTF-8">
     <title>jQuery Facts</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <style>
+    html{
+    box-sizing: border-box;
+    }
+    *, *::before, *::after {
+    box-sizing: inherit;
+    padding: 0;
+    margin: 0;
+    }
+    body {
+    height: 100%;
+    color: white;
+    background: url('img/park.jpeg')
+    }
+    .main-wrapper {
+    background: black;
+    width: 70%;
+    margin: auto;
+    height: 100%;
+    }
+    h1, h3 {
+    padding: 2em;
+    text-align: center;
+    padding: 1em 0;
+
+    }
+    dt, dd {
+    width: 70%;
+    margin: 0 auto;
+    padding: 1em 0;
+    }
+    dd {
+    line-height: 1.5;
+    }
+    dt {
+    text-align: center;
+    cursor: pointer;
+
+    }
+    .highlight {
+    font-size: 1.5em;
+    font-style: italic;
+    border-bottom: 2px solid white;
+    }
+    .invisible {
+    display: none;
+    }
+
+    .film-details {
+    display: flex;
+    margin-top: 1em;
+    width: 90%;
+    margin: auto;
+    }
+    .list {
+    display: flex;
+    flex-direction: column;
+    padding: 2em;
+    }
+    li {
+    padding: .5em;
+    cursor: pointer;
+    }
+    button {
+    padding: 2em;
+    margin: auto;
+    display: block;
+    cursor: pointer;
+    }
+    h3 {
+    cursor: pointer;
+    }
+    .frames {
+    margin: auto;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 2em;
+    }
+    .image {
+    border: 2px solid white;
+    height: 200px;
+    width: 200px;
+    }
+    img {
+    height: 200px;
+    width: 200px;
+    }
+    .bold {
+    font-weight: bold;
+    }
+    .red {
+    color: red;
+    }
+
+    </style>
+
+
 </head>
 <body>
+<h1>NATIONAL PARKS</h1>
+<div class="parkLists">
+    <div class="list">
+        <h3>Arches/h3>
+        <ul>
+            <li>Location: North of Moab in the state of Utah</li>
+            <li>Site of more than 2,00 natual sandstone arches, such as the massive, red-hued Delicate Arch in the east.</li>
+            <li>Long, thin Landscape arch stands in Devils Garden to the north. </li>
+        </ul>
+    </div>
+    <div class="list">
+        <h3>Denali</h3>
+        <ul>
+            <li>At 20,310 feet high, it is home to Mt. McKinley. America's tallest peak </li>
+            <li>Emcompasses over 6 million acres</li>
+            <li>Home to grizzly bears, wolves, moose, caribou and Dall sheep </li>
+        </ul>
+    </div>
+    <div class="list">
+        <h3>Everglades</h3>
+        <ul>
+            <li>One of the largest wetland\s in the world. </li>
+            <li>Gets 60 inches of rain a year</li>
+            <li>A Nike Hercules Missle Base is still housed in the heart of the park.</li>
+        </ul>
+    </div>
+</div>
+<button id='btn'>National Parks</button> <div class="frames">
+    <div class="image" class="invisible"><img src="img/arches.jpg" alt=""></div>
+    <div class="image"><img src="img/denali.jpg" alt=""></div>
+    <div class="image"><img src="img/everglades.jpg" alt=""></div>
+</div>
+
+
+</div>
+
+<ul id="national-parks">
+    <li>Arches</li>
+    <li>Badlands</li>
+    <li>Carlsbad Caverns</li>
+    <li>Denali</li>
+    <li>Everglades</li>
+</ul>
+<h3>State Parks of Texas</h3>
+<ul id="state-parks-texas">
+    <li>Abilene</li>
+    <li>Big Bend</li>
+    <li>Choke Canyon</li>
+    <li>Davis Mountains</li>
+    <li>Enchanted Rock</li>
+</ul>
+<script>
+    (function () {
+        "use strict";
+        $(document).ready(function () {
+            $('ul').hide()
+            $('dd').addClass('invisible')
+
+
+            $('dt').click(function () {
+                $(this).next().toggleClass('invisible')
+                $(this).toggleClass('highlight')
+            })
+            $('#btn').click(function (e) {
+                e.preventDefault();
+                $('ul').each(function (index, element) {
+                    $(element).children().last().addClass('red')
+                });
+            });
+            $('li').click(function() {
+                $(this).first().css('color', 'blue');
+            })
+            $('h3').click(function() {
+                $(this).next().addClass('bold')
+                $(this).next().slideToggle(250)
+            })
+            $('#x').click(function() {
+                $(this).parent().slideUp(250)
+            })
+        })
+
+
+    })()
+
+
+
+
+
+</script>
 
 </body>
 </html>

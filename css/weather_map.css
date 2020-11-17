@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: normal;
+}
+
+#map {
+    width:90%;
+    height: 50vh;
+    margin: auto;
+    border: 2em solid darkgrey;
+}
+.card {
+    max-width: 16rem;
+    background-color: darkgrey;
+    margin-bottom: 2em;
+}
+.navbar {
+    background-color: #CC5500;
+    color: white;
+    border: 1px solid black;
+}
+
+.card-text, .card-title {
+    display: flex;
+    justify-content: center;
+    color: white;
+}
+#geocoder {
+
+    color: black;
+}

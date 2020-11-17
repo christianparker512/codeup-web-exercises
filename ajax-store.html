@@ -23,7 +23,7 @@
         button {
             display: flex;
             float: right;
-            vertical-align: middle;
+            margin: 0 auto;
         }
         th, tr, table {
             color: black;
@@ -32,6 +32,7 @@
         h1,h2 {
             background-color: #b4373d;
             color: white;
+            line-height: 1.5em;
             border: 1px solid black;
             margin-left: auto;
             margin-right: auto;
@@ -44,22 +45,20 @@
     </style>
 </head>
 <body>
-<img src="img/parkersbuildingsupply.jpg"  alt="Parker's building Supply" class="center">
+<img src="img/parkersbuildingsupply.jpg"  alt="Parker's Building Supply" class="center">
 <hr>
-<h1 class="float-left mr-8">Current Inventory</h1>
+<h1>Current Inventory</h1>
 
-<table id="products"  class="table table-striped">
-
+<table id="products"  class="table">
     <tr>
         <th scope="col">Title</th>
         <th scope="col" class="text-center">Quantity</th>
         <th scope="col" class="text-center">Price</th>
         <th scope="col" class="text-center">Categories</th>
     </tr>
-    </thead>
-    <tbody id="insertProducts"></tbody>
+<tbody id="insertProducts"></tbody>
 </table>
-<button id="refresh-btn">Refresh Table</button>
+<button >Refresh Table</button>
 <h2>YOU NEED A TOOL? WE'VE GOT THE TOOLS?</h2>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js"></script>
 

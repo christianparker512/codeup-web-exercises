@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <style>
+        h1 {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 50%;
+        }
+        body {
+            background-image: url("img/window.jpeg");
+        }
+        .card {
+            width: 60%;
+            margin: 2em auto;
+            border: 5px solid black;
+            background-color: transparent;
+        }
+
+    </style>
+</head>
+<body>
+<h1>The Future is Out There...</h1>
+<div id="post"></div>
+
+
+<script>
+    (function() {
+        $(document).ready(function() {
+            function postBuilder({title, content, categories, date}) {
+                // return `
+                //     <h2>${title}</h2>
+                //     <p>Posted on ${date}</p>
+                //     <p>${content}</p>
+                //     <div>${categories.join(', ')}</div>
+                // `
+                return `
+                        <div class="card">
+                            <div class="card-body">
+                                <h5 class="card-title">${title}</h5>
+                                <p class="card-text"><small class="text">Posted on ${date}</small></p>
+                                <p class="card-text">${content}</p>
+                                <p class="card-text"><small class="text-muted">Categories: ${categories.join(', ')}</small></p>
+                            </div>
+                        </div>
+                    `
+            }
+
+            function renderPosts(posts) {
+                let html = '';
+                for(let post of posts) {
+                    html += postBuilder(post)
+                }
+                $('#post').html(html)
+            }
+
+            $.get("data/ajax-blog.json").done(function(post){
+                renderPosts(post)
+            })
+        })
+    })();
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -21,7 +21,6 @@
                 </div>
             </div>
         `
-
         }
 
         function renderForecasts(locationName, forecasts){
@@ -47,11 +46,6 @@
             return marker.getLngLat()
         }
         let currentLocation = "" || "San Antonio";
-
-
-
-
-
 
         $.get("http://api.openweathermap.org/data/2.5/forecast", {
             APPID: OPEN_WEATHER_APPID,

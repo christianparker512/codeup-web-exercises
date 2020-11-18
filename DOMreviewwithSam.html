@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Review with Same</title>
+</head>
+<body>
+<h1>Hello World</h1>
+<p id="mainarticle">Hello there I am right here</p>
+<form action="">
+    <input id="addToList" type="text">
+</form>
+<p class="addButton"> push me</p>
+<ul id="list">
+    <li>Hi</li>
+</ul>
+<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+<script>
+    "use strict";
+    $(document).ready(function(){
+
+        $('h1').html("hello there!");
+
+        $('h1').on("click",function(){
+            $('#mainarticle').css("color", "blue")
+        })
+        $('.addButton').click(function(){
+            //grab value of input
+            var userInput = $('#addToList');
+            var newListItem =  "<li>"+ userInput.val() + "</li>"
+            // append to the unordered list
+            $('ul').append(newListItem);
+            // empty the input
+            userInput.val("");
+        })
+
+    })
+</script>
+</body>
+</html>

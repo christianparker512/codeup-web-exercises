@@ -25,7 +25,7 @@ $(document).ready(function () {
     });
 
     highlight.click(function () {
-        cohort.css('background', 'yellow')
+        $('#cohort-name').css('background-color', 'yellow')
     });
 
     setTimeout(function () {

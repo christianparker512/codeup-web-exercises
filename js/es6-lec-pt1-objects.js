@@ -34,17 +34,17 @@ function checkWeatherTwo(isRaining) {
 /*==============================================*/
 
 
-// let instructor = 'Vivian';
-// instructor = 'Sophie';
-// console.log(instructor); //Sophie
+let instructor = 'Vivian';
+instructor = 'Sophie';
+console.log(instructor); //Sophie
 
 
 
 
-// const instructor = 'Vivian';
-// console.log(instructor); // Vivian
-// instructor = 'Sophie';
-// console.log(instructor); // Uncaught TypeError: Assignment to constant variable.
+const instructor = 'Vivian';
+console.log(instructor); // Vivian
+instructor = 'Sophie';
+console.log(instructor); // Uncaught TypeError: Assignment to constant variable.
 
 
 
@@ -57,18 +57,18 @@ function checkWeatherTwo(isRaining) {
 * let and const (block scope vs. function scope)
 */
 
-// {
-//     var a = 10;
-// }
-// {
-//     let b = 20;
-// }
-//
-// const c = 30;
+{
+    var a = 10;
+}
+{
+    let b = 20;
+}
 
-// console.log(a); // 10
-// console.log(b); // Uncaught ReferenceError: b is not defined
-// console.log(c += 3); //Uncaught TypeError: Assignment to constant variable.
+const c = 30;
+
+console.log(a); // 10
+console.log(b); // Uncaught ReferenceError: b is not defined
+console.log(c += 3); //Uncaught TypeError: Assignment to constant variable.
 
 
 
@@ -104,7 +104,8 @@ let greeting = "Hello my name is " + firstName + ' ' + lastName + '.';
 // console.log(greeting);
 
 //TODO: Refactor code from above, using template strings.
-
+let newGreeting = `Hello my name is ${firstName} ${lastName}.toUpperCase()`
+console.log(newGreeting);
 
 
 
@@ -128,9 +129,19 @@ itemsHtml += "</ul>";
 
 // console.log(itemsHtml);
 
-
+// let fridge = `My fridge has ${itemsHtml} inside it.`
+// console.log(itemsHtml);
 
 //new way
+let newItemsHthml = `
+    <ul>
+        <li>${items[0]}</li>
+        <li>${items[1]}</li>
+        <li>${items[2]}</li>
+    </ul>
+        `;
+
+    console.log(newItemsHtml);
 
 
 
@@ -148,36 +159,31 @@ let program = {
     technology: "HTML, CSS, JS, Java"
 }
 
+let programLetter = `Hello and thank you for your interest in ${program.name}.
 
+Our program is located in ${program.location}. The program lasts ${program.length}`
 
-
-
-
-
-
-
-
+console.log(programLetter);
 
 /*****************************
  *       For Of Loops
  *****************************/
 
 
-// const arr = ["one", "two", "three"];
-// for (let ele of arr) {
-//     console.log(ele);
-// }
-
-
-
+const arr = ["one", "two", "three"];
+for (let ele of arr) {
+    console.log(ele);
+}
 
 
 /*==============================================*/
 //TODO: Using for of loops, log each instructors name
 
-// const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
+const days = ["monday", "tuesday", "wednesday", "thursday", "friday", "saturday", "sunday"]
 
-
+for (let day of days){
+    console.log(days);
+}
 
 
 
@@ -188,7 +194,9 @@ let program = {
 
 // const instructors = ["Vivian", "Sophie", "Justin", "Casey", "David"]
 
-
+for (let instructor of instructors){
+    console.log(instructor);
+}
 
 
 
@@ -231,11 +239,33 @@ function sum(a,b){
 /*==============================================*/
 //TODO: Rewrite the following function using arrow function syntax
 
-function addOne(arg1) {
-    return arg1 + 1;
+// function addOne(arg1) {
+//     return arg1 + 1;
+// }
+
+function addOne(arg1){
+    return arg1 +1;
+}
+// example to an function expression
+let addOneA = function(arg1){
+    return arg1 +1;
+}
+// console.log should be 2 and 3
+
+// refactor REMOVE FUNCTION KEYWORD AND ADD ARROW SYNTAX =>
+let addOneB = (arg1) => {
+    return arg1 +1;
 }
 
+// refactored even more BY REMOVING CURLY BRACES (IF ONLY ONE STATEMENT).
+// with one statement syntax that whatever is after arrow, it is assumed that the last piece takes the place of the return
+let addOneC = (arg1) =>  arg1 +1;
 
+// remove parenthesis if only 1 input
+// This is used in react and any modern javascript framework
+let addOneD = arg1 => arg1 + 1;
+
+console.log(addOne(1));
 // console.log(addOneA(2));
 // console.log(addOneB(2));
 // console.log(addOneC(2));

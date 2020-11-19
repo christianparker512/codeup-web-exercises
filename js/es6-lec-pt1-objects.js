@@ -209,14 +209,41 @@ for (let instructor of instructors){
 function sayHello(name){
     return `Hello ${name}`;
 }
+function sayHello(name){
+    return `Hello ${name}`
+}
+// example to an function expression
+let addOneA = function(arg1){
+    return arg1 +1;
+}
+
+let sayHelloA = function(name){
+    return `Hello ${name}`
+}
+// console.log should be 2 and 3
+
+// refactor REMOVE FUNCTION KEYWORD AND ADD ARROW SYNTAX =>
+let addOneB = (arg1) => {
+    return arg1 +1;
+}
+let sayHelloAgain = (name) => {
+    return `Hello ${name}`
+}
+// refactored even more BY REMOVING CURLY BRACES (IF ONLY ONE STATEMENT).
+// with one statement syntax that whatever is after arrow, it is assumed that the last piece takes the place of the return
+let addOneC = (arg1) =>  arg1 +1;
+
+let sayHelloAgain = (name) = `Hello ${name}`
+// remove parenthesis if only 1 input
+// This is used in react and any modern javascript framework
+let addOneAgain = arg1 => arg1 + 1;
+
+let sayHelloAgain = name => 'Hello ${name}'
 
 
-
-
-
-// console.log(sayHelloAgain("Vivian")); //Hello Vivian
-// console.log(sayHelloAgain("Justin")); //Hello Justin
-// console.log(sayHelloAgain("Sophie")); //Hello Sophie
+console.log(sayHelloAgain("Vivian")); //Hello Vivian
+console.log(sayHelloAgain("Justin")); //Hello Justin
+console.log(sayHelloAgain("Sophie")); //Hello Sophie
 
 
 
@@ -227,11 +254,12 @@ function sum(a,b){
     return a + b;
 }
 
+const sum = (a,b) => a+b;
 
 
-// console.log(sum(5, 3)); //8
-// console.log(sum(5, 20)); //25
-// console.log(sum(1, 9)); //10
+console.log(sum(5, 3)); //8
+console.log(sum(5, 20)); //25
+console.log(sum(1, 9)); //10
 
 
 
@@ -290,11 +318,19 @@ function sayHello(name) {
     return 'Hello, ' + name + '!';
 }
 
+function sayHello(name = "World"){
+    return `Hello ${name}`;
+}
+
+// If you don't pass anything in the value of name is World'
+
+// or you can do it with const
+
+const sayHello2 = (name = "World") => `Hello{name}`
 
 
-
-// console.log(sayHello());; // "Hello, World!"
-// console.log(sayHello('codeup'));; // "Hello, codeup!"
+console.log(sayHello()); // "Hello, World!"
+console.log(sayHello('codeup'));; // "Hello, codeup!"
 
 
 

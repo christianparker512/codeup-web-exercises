@@ -80,5 +80,22 @@
         }).fail(function(jqXhr, status ,error) {
             console.error(error)
         })
+        // function reverseGeocode(coordinates, token) {
+        //     var baseUrl = 'https://api.mapbox.com';
+        //     var endPoint = '/geocoding/v5/mapbox.places/';
+        //     return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + token)
+        //         .then(function(res) {
+        //             return res.json();
+        //         })
+        //         // to get all the data from the request, comment out the following three lines...
+        //         .then(function(data) {
+        //             for(var i = 0; i < data.features.length; i++){
+        //                 if(data.features[i].place_type[0] === "place"){
+        //                     return data.features[i].place_name;
+        //                 }
+        //             }
+        //             return data.features[0].place_name;
+        //         });
+        // }
     })
 })()

@@ -32,10 +32,10 @@ var userInputs = ['Red','Dog', 'Orange'];
 
 //Bonus: Refactor your functions using ES6
 // Turn three lines of code into one
-let newArray = numbers.map(num=> num+1);
+// let newArray = numbers.map(num=> num+1);
 
-let newArrayTimesThree = newArray.map(num => num*3);
-console.log(newArrayTimesThree);
+// let newArrayTimesThree = newArray.map(num => num*3);
+// console.log(newArrayTimesThree);
 /*********************************************
  *              .filter
  ******************************************** */
@@ -112,12 +112,7 @@ const vegetables = fruitsAndVeggies.filter(function(produce){
  *              .reduce
  ******************************************** */
 
-const numbersArray = [1, 2, 3, 4, 5];
 
-const sum = numbersArray.reduce(function(currentSum, currentNumber){
-    console.log(currentSum);
-    return currentSum + currentNumber;
-}, 0);
 //accumulation = 0
 // add 1
 //accumulation = 1
@@ -133,9 +128,23 @@ const sum = numbersArray.reduce(function(currentSum, currentNumber){
 
 
 // TODO TOGETHER: Let's reduce our original numbers Array into one single value.
+const numbersArray = [1, 2, 3, 4, 5];
 
+const sum = numbersArray.reduce(function(currentSum, currentNumber){
+    console.log(currentSum);
+    return currentSum + currentNumber;
+}, 0);
+
+console.log(sum);
 // TODO: Using .reduce, subtract all numbers in the numbers Array from a starting point of 100.
+//     const diff = numbersArray.reduce(callback, starting point){
+//     const diff = numbersArray.reduce(callback function(accumulator), starting point){
+    const diff = numbersArray.reduce(function(currentDifference, currentNumber){
+        console.log(currentDifference);
+        return currentDifference - currentNumber;}, 100);
 
+//     ES6 syntax
+// const diff = numbersArray.reduce((currentDifference, currentNumber)=> (currentDifference - currentNumber), 100);
 const shoppingCarts = [
     {
         apples: 8,
@@ -161,18 +170,70 @@ const shoppingCarts = [
 ];
 
 // TODO: Using .reduce, return the total number of apples.
+// ****My attempt
+const manzanas = shoppingCarts.reduce((total, cart) =>{
+    console.log(manzanas)
+    return total + cart.apples;
+},0);
+console.log(manzanas)
 
 
+// let totalFruit = shoppingCarts.reduce(function(currentTotal:{}, cart:{}){
+//     let apples = cart.apples;
+//     let bananas = cart.bananas;
+//     if(currentTotal[apples]=== undefined){
+//         currentTotal.apples === apples;
+//     }
+// }, {})
 const colors = ['red','orange','red','blue','blue','green','red'];
 
 // TODO: Count the number of times a color appears in this Array. Hint: your initial value should be an empty object.
 
+// const colorCount = colors.reduce(function(colorCount, color){
+//     if(typeof colorCount[color] === "undefined") {
+//         colorCount[color] = 1;
+//     } else {
+//         colorCount[color] +=1;
+//     }
+//     console.log(colorCount);
+//     return colorCount;
+//
+// },{});
 
+// function countWords(sentence) {
+//     const words = sentence.split(' '); // transform a sentence into an array of words
+//     const wordCountObject = words.reduce((wordCounts, word) => {
+//         if (typeof wordCounts[word] === 'undefined') {
+//             // if the word is not yet present in our object, set it's value to 1
+//             wordCounts[word] = 1;
+//         } else {
+//             // otherwise increment the existing count
+//             wordCounts[word] += 1;
+//         }
+//         return wordCounts;
+//     }, {}); // start with an empty object
+//     return wordCountObject;
+// }
+
+countWords('Mary had a little lamb little lamb little lamb');
+// {Mary: 1, had: 1, a: 1, little: 3, lamb: 3}
+// The default data type of our initial value is going to be whataver data type is of the elements we iterate over, unless specified otherwise.
 const lyrics = ['we','all','live','in','a','yellow','submarine'];
 
 //TODO TOGETHER: Using reduce, let's turn this into a string.
+const oneLine = lyrics.reduce(function(currentString, word){
+    return `${currentString} ${word}`
+},'')
 
+console.log(oneLine);
+
+// ES6 syntax
+// const oneLine =  lyrics.reduce((currentString, word) => `${currentString} ${word}`);
+// console.log(oneLine);
 // Bonus: Create an Array of all the unique fur colors! Hint: check out the ES6 'Set' data type.
+// to transform a set into an Array: array.from(insertyourSetHere)
+
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Set
 
 var hamsters = [
     {

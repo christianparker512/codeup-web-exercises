@@ -48,23 +48,49 @@ const users = [
 // const fruits = fruitsAndVeggies.filter(function(produce ){
 //     return produce.type === "fruit";
 // });
+// const filteredUsers = users.filter((user) => {
+//     if(user.languages.length >=3){return true;
+// //     }else {
+// //         return false;
+// //     });
 
+//     }
+// )
 let threeLanguages = users.filter(function({languages}) {
+//     if(user.languages.length >=3){return true;
+//     }else {
+//         return false;
+//     });
+
+
     return languages.length >= 3;
     // *** ES6 Refractoring
+    // let threeLanguages = users.filter(user => user.languages.length >=3)
 // let threeLanguages = users.filter(({languages}) => languages.length >=3)
 
 });
 console.log(threeLanguages)
 
 // 3. Use .map to create an array of strings where each element is a user's email address
+
 let arrayOfEmails = users.map(function({email}) {
     return email;
-    // *** ES6 Refractoring
+    // *** ES6 Refactoring
 // let arrayOfEmails = users.map(({email}) => email)
 });
 console.log(arrayOfEmails);
+// justin's solution'
+// const emails = users.map(user =>{
+//     return user.email;
+// });
+// console.log(emails);
 
+// Justin's ES6
+// const emails = users.map(user=>{ return user.email;
+// });
+
+// const emails = users.map(({email}) => { return email;});
+// console.log(emails);
 // 4. Use .reduce to get the total years of experience from the list of users. Once you get the total of years you can use the result to calculate the average.
 function averageYears () {
     // const totalSales = salesPeople.reduce((total, person) => {
@@ -76,6 +102,16 @@ function averageYears () {
 }
 console.log(averageYears());
 
+
+// justin's solution'
+
+// const totalYears = users.reduce((accum, curr)=>{
+//
+// }, data type we're going to be returning. in this...we're going to be returning a number. 0);
+
+const totalYears = users.reduce((yearsOfExperience, user) =>{
+    return accum + user.yearsOfExperience;
+}, 0);
 // 5. Use .reduce to get the longest email from the list of users.
 //stackoverflow.com/questions/54351784/find-longest-string-in-array-of-objects-by-string-property-value
 // var longest = arr.reduce(function (a, b) { return a.genre.length > b.genre.length ? a : b; }).genre.length;
@@ -85,6 +121,17 @@ const longestEmail = users.reduce((longest, {email}) => {
 
 console.log(longestEmail);
 
+// justin's solution'
+// const longestEmail  = users.reduce((accum, curr) =>{
+//     if (curr.email.length > accum.length) {
+//         return curr.email;
+//     } else {
+//         return accum;
+//         // return (current.email.length > accum.length)? curr.email: accum;
+//     }
+// }, '');
+
+
 // 6. Use .reduce to get the list of user's names in a single string. Example: Your instructors are: ryan, luis, zach, fernando, justin.
 
 // var result = users.reduce(function(list, {name}) =>
@@ -93,8 +140,38 @@ console.log(longestEmail);
 // let listOfUserNames = users.reduce((list, {name}) => {
 //    return  (list + {name}.join(","));
 // });
-var userString = users.map(function({name}){
-    return users.name;
-}).join(",");
+// var userString = users.map(function({name}){
+//     return users.name;
+// }).join(",");
+//
+// console.log(userString);
 
-console.log(userString);
+
+// justin's solution
+    const userString = users.reduce((accum, name) =>{
+        return accum + name + ",";
+}, "The instructors are: ").slice(0, -2).concat('.');
+
+
+//     ES6
+// const userString = users.reduce((accum, {name}) => `${accum} ${name}, `, 'The instructors are : ').slice(0, -2) + ".";
+    console.log(userString);
+
+
+    // bonus
+// Justin's solution'
+
+// create a long array that has all of the languages in the array. and then convert the array into a special array called a set. and then turn it back into an array
+//
+// add all languages together into one array using reduce.
+//     convert to set
+//     convert set back to array
+
+const allLanguages = users.reduce((accum, curr) => {
+  return accum.concat(curr.languages)
+},[]);
+
+const uniqueLanguages = new Set(allLanguages);
+console.log(uniqueLanguages);
+const arrayUnique = Array.from(uniqueLanguages);
+console.log(arrUnique);

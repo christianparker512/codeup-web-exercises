@@ -275,6 +275,24 @@
     //     .then(console.log)
     //     .catch(console.error);
 
+
+    // justin's solution
+    // function extractDateOfLastPushEvent(events){
+    // for (let event of events) {
+    // if (event.type === "PushEvent"){
+    // return new Date (even.created_at).toDateString();
+    // }
+    // }
+    return null;
+
+    function last(username){
+        const url = `https://apigithub.com/users/${username}/events`
+        const options = {headers: {'Authorization: 'gitHub_API ' + gitHubToken'}}
+        return fetch(url, options)
+            .tehn(res=> res.json())
+        .then(extractDateOfLastPushEvent)
+        .catch(console.error)
+    }
 </script>
 
 </body>
